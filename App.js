@@ -1,7 +1,6 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './Home';
-import PrimeiroModulo from './PrimeiroModulo';
 import PaginaModulo from './components/PaginaModulo';
 import dados from './dados'
 
@@ -12,7 +11,8 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={Home} />
-		<Drawer.Screen name="PaginaModulo" component={PaginaModulo} initialParams={{dados: dados[0]}}/>
+		    <Drawer.Screen name="PaginaModulo" component={PaginaModulo} initialParams={{dados: dados[0]}}/> 
+        <Drawer.Screen name="PaginaModulo2" component={PaginaModulo} initialParams={{dados: dados[1]}}/>
       </Drawer.Navigator>
     </NavigationContainer>
   );

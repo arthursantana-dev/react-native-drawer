@@ -4,10 +4,17 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function PaginaModulo({route}) {
 	const {dados} = route.params
 
-	// console.log(dados.linguagem.atribuicoesEResponsabilidades);
+	console.log(dados);
 
-	return(<View>
-		<Text>
-		</Text>
+	return(<View style={style.view}>
+			{
+				dados.map(c => <Text>{c.nome}</Text>)
+			}
 	</View>)
 }
+
+const style = StyleSheet.create({
+	view: {
+		flex: 1
+	}
+})
