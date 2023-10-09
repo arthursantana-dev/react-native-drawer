@@ -9,7 +9,7 @@ const dados = [
 		},
 
 		{
-			nome: "programacaoAlgoritmos",
+			nome: "programacao e algoritmos",
 			atribuicoesEResponsabilidades: "Implementar algoritmos em..."
 		}
 	],
