@@ -1,27 +1,51 @@
-import { useNavigation } from "@react-navigation/native";
-import { BackHandler } from "react-native";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 export default function Componente({ route }) {
 
-	const { dados } = route.params
+	const { dados, dadosId} = route.params
 
-	const c = dados
+	console.log(`Componente: ${dadosId}`);
 
 	return (
-		<View>
-			<Text>
-				{c.nome}
+		<View style={style.view}>
+			<Text style={[style.text, style.title]}>
+				{dados[dadosId].nome}
 			</Text>
-				<Text>Atribuições e Responsabilidades</Text>
-				<Text>
-					{c.atribuicoesEResponsabilidades}
+				<Text style={[style.text, style.contentTitle]}>Atribuições e Responsabilidades</Text>
+				<Text style={style.text}>
+					{dados[dadosId].atribuicoesEResponsabilidades}
 				</Text>
-				<Text>Valores e Atitudes</Text>
-				<Text>
-					{c.valoresEAtitudes}
+				<Text style={[style.text, style.contentTitle]}>Valores e Atitudes</Text>
+				<Text style={style.text}>
+					{dados[dadosId].valoresEAtitudes}
 				</Text>
-
 		</View>
 	)
 }
+
+const style = StyleSheet.create({
+	view: {
+		flex: 1,
+		justifyContent: "center",
+		padding: 20,
+		gap: 10
+	},
+
+	title: {
+		color: 'rgba(234, 66, 66, 1)',
+		fontWeight: 'bold',
+		fontSize: 30
+	},
+
+	contentTitle: {
+		backgroundColor: 'gray',
+		color: 'white',
+		fontSize: 15,
+		padding: 4
+	},
+
+	text: {
+		textAlign: 'center',
+		fontSize: 14
+	}
+})

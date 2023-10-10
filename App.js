@@ -5,6 +5,7 @@ import Home from './Home';
 import PaginaModulo from './components/PaginaModulo';
 import dados from './dados'
 import Componente from './components/Componente';
+import StackModulo from './components/StackModulo';
 
 
 const Drawer = createDrawerNavigator();
@@ -22,9 +23,9 @@ export default function App() {
 				headerTitleStyle: { color: 'rgba(234, 66, 66, 1)' }
 			}}>
 				<Drawer.Screen name="Inicial" component={Home} />
-				<Drawer.Screen name="Primeiro Módulo" component={PaginaModulo} initialParams={{ dados: dados[0]}} />
-				<Drawer.Screen name="Segundo Módulo" component={PaginaModulo} initialParams={{ dados: dados[1] }} />
-				<Drawer.Screen name='Componente' component={Componente} initialParams={{dados: dados}} />
+				<Drawer.Screen name="Primeiro Módulo" component={StackModulo} initialParams={{ dados: dados[0], componentes: [PaginaModulo, Componente]}} />
+				{/* <Drawer.Screen name="Segundo Módulo" component={PaginaModulo} initialParams={{ dados: dados[1] }} /> */}
+				{/* <Drawer.Screen options={{drawerLabelStyle: {display: 'none'}, drawerActiveBackgroundColor: 'transparent'}} name='Componente' component={Componente} initialParams={{dados: dados}} /> */}
 			</Drawer.Navigator>
 		</NavigationContainer>
 	);
