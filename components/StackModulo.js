@@ -1,22 +1,39 @@
 import { useNavigation } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { View } from "react-native";
+import PaginaModulo from "./PaginaModulo";
 
 export default function StackModulo({route}) {
-    const {dados, componentes} = route.params
+    const {dados, idComponentesModulo, componentes} = route.params
 
     const Stack = createStackNavigator()
 
+    console.log(`Stack Modulo - dados: ${Array.from(dados).length}`);
+    console.log(`Nº matérias: ${Array.from(dados).length}`);
+
     return(
         <Stack.Navigator>
+            <Stack.Screen options={{headerShown: false}} name="Pagina Modulo" component={componentes[0]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo}} />
+
             {
-                componentes.map((c, i) => {
-                    console.log(`stackI: ${i}`);
-                    return <Stack.Screen options={{headerShown: i > 0? true : false}}  
-                    key={i} name={`Componente ${i}`} 
-                    component={c} initialParams={{dados: dados, dadosId: i}}/>
+                dados.map((d,i) => {
+                    return <Stack.Screen key={i} name={`Componente ${i}`} component={componentes[1]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo + i}}/>
                 })
             }
+{/* 
+            <Stack.Screen name="Componente" component={componentes[1]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo}}/>
+            <Stack.Screen name="Componente 1" component={componentes[1]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo  +1}}/> */}
+            {/* {
+                componentes.map((c, i) => {
+                    return (
+                        <Stack.Screen options={{headerShown: i > 0? true : false}}  
+                        key={i} 
+                        name={`Componente ${i}`} 
+                        component={c} 
+                        initialParams={{dados: dados[id]}}/>
+                    )
+                })
+            } */}
         </Stack.Navigator>
     )
 }

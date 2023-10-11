@@ -6,15 +6,29 @@ import { StyleSheet, Text, View } from 'react-native';
 import Componente from './Componente';
 
 export default function PaginaModulo({ route }) {
-	const {dados, dadosId } = route.params
+	const {dados } = route.params
 
 	const navigation = useNavigation()
 
-	console.log(`Página Módulo: ${dadosId}`);
+	console.log(`PMODULO - dados: ${Array.from(dados).length}`);
 	
 
 	return (<View style={style.view}>
+		<Text>
+			Página Módulos
+		</Text>
+
 		{
+			dados.map((c, i) => {
+				return <TouchableHighlight style={style.button} onPress={() => {navigation.push(`Componente ${i}`)}}>
+					<Text style={style.buttonText}>
+						{`${dados[i].nome}`}
+					</Text>
+				</TouchableHighlight>
+			})
+		}
+
+		{/* {
 			
 			dados.map((c, i) => {
 				// console.log(`${i}: ${c}`);
@@ -24,7 +38,7 @@ export default function PaginaModulo({ route }) {
 					</Text>
 				</TouchableHighlight>)
 			})
-		}
+		} */}
 	</View>)
 
 }

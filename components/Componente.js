@@ -2,22 +2,24 @@ import { View, Text, StyleSheet } from "react-native";
 
 export default function Componente({ route }) {
 
-	const { dados, dadosId} = route.params
+	const { dados, idComponentesModulo } = route.params
 
-	console.log(`Componente: ${dadosId}`);
+	console.log(`Componente DADOS: ${Array.from(dados).length}`);
+
+	console.log(`Componente - dados - nome: ${dados[idComponentesModulo].nome}, idComponente: ${idComponentesModulo}`);
 
 	return (
 		<View style={style.view}>
 			<Text style={[style.text, style.title]}>
-				{dados[dadosId].nome}
+				{dados[idComponentesModulo].nome}
 			</Text>
 				<Text style={[style.text, style.contentTitle]}>Atribuições e Responsabilidades</Text>
 				<Text style={style.text}>
-					{dados[dadosId].atribuicoesEResponsabilidades}
+					{dados[idComponentesModulo].atribuicoesEResponsabilidades}
 				</Text>
 				<Text style={[style.text, style.contentTitle]}>Valores e Atitudes</Text>
 				<Text style={style.text}>
-					{dados[dadosId].valoresEAtitudes}
+					{dados[idComponentesModulo].valoresEAtitudes}
 				</Text>
 		</View>
 	)
