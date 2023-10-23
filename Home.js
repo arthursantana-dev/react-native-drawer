@@ -16,7 +16,7 @@ export default function Home() {
 		<Text style={styles.text}>
 			O curso tem três módulos e dura um ano e meio. Pensamos em desenvolver esse app para explicar o conteúdo
 		</Text>
-		<Image source={{uri: './assets/ds.png'}} />
+		<Image style={styles.image} source={require('./assets/ds.png')} />
 		<Text style={[styles.text, styles.description]}>
 			Esse app foi desenvolvido sob orientação do Prof. Tiago A. Silva.
 		</Text>
@@ -30,10 +30,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+	padding: 10
   },
 
   text: {
 	textAlign: 'center'
+  },
+
+  image: {
+	width: '100%',
+	resizeMode: 'contain'
   },
 
   description: {

@@ -7,7 +7,7 @@ export default function Contato() {
 			<Text style={styles.title}>
 				Fique atento às datas, acesse o site abaixo
 			</Text>
-			<TouchableHighlight style={styles.button} onPress={() => {Linking.openURL('www.vestibulinhoetec.com.br')}}>
+			<TouchableHighlight style={styles.button} onPress={() => {Linking.openURL('https://vestibulinhoetec.com.br')}}>
 				<Text style={{color: 'white', fontWeight: 'bold'}}>
 					Inscreva-se pelo site: www.vestibulinhoetec.com.br
 				</Text>
