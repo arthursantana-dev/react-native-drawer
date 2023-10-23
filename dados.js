@@ -87,7 +87,50 @@ const dados = [
 			atribuicoesEResponsabilidades: "Planejar projetos de sistemas computacionais.",
 			valoresEAtitudes: "Comunicar-se com a equipe com clareza e objetividade. • Organizar procedimentos de maneira diversa, visando melhor eficiência."
 		}
-	]	
+	],
+
+	[
+		{
+			nome: "Segurança de Sistemas de Informação",
+			atribuicoesEResponsabilidades: "Implementar rotinas de segurança da informação.",
+			valoresEAtitudes: "Estimular atitudes respeitosas. • Incentivar comportamentos éticos. • Desenvolver a criticidade."
+		}, 
+		{
+			nome: "Bancos de Dados III",
+			atribuicoesEResponsabilidades: "Realizar gestão de banco de dados.",
+			valoresEAtitudes: "Incentivar a criatividade. • Desenvolver a criticidade. • Fortalecer a persistência e o interesse na resoluçaõ de situações-problema."
+		}, 
+		{
+			nome: "Sistemas Embarcados",
+			atribuicoesEResponsabilidades: "Desenvolver sistemas embarcados.",
+			valoresEAtitudes: "Fortalecer a persistência e o interesse na resolução de situações-problema. • Estimular a organização. • Incentivar a criatividade."
+		}, 
+		{
+			nome: "PRogramação de Aplicativos Moblie II",
+			atribuicoesEResponsabilidades: "Documentar, construir e manter sistemas de informação para plataformas móveis.",
+			valoresEAtitudes: "Responsabilizar-se pela produção, utilização e divulgação de informações. • Incentivar a criatividade. • Estimular a organização."
+		}, 
+		{
+			nome: "Programação Web III",
+			atribuicoesEResponsabilidades: "Documentar, construir e manter sistemas de informação para web.",
+			valoresEAtitudes: "Responsabilizar-se pela produção, utilização e divulgação de informações. • Fortalecer a persistência e o interesse na resolução de situações-problema. • Estimular a organização. • Incentivar a criatividade."
+		}, 
+		{
+			nome: "Qualidade e Teste de Software",
+			atribuicoesEResponsabilidades: "Testar softwares pare melhoria de qualidade de sistemas. • Elaborar registros e planilhas de acompanhamento e controle de atividades.",
+			valoresEAtitudes: "Responsabilizar-se pela produção, utilização e divulgação de informações. • Estimular a proatividade. • Desenvolver criticidade. • Incentivar comportamentos éticos."
+		}, 
+		{
+			nome: "Ética e Cidadania Organizacional",
+			atribuicoesEResponsabilidades: "Atuar de acordo com princípuis éticos nas relaçoes de trabalho.",
+			valoresEAtitudes: "Estimular atitudes respeitorsas. • Incentivar comportamentos éticos. • Comprometer-se com a igualdade de direitos."
+		}, 
+		{
+			nome: "Desenvolvimento de Trabalho de Conclusão de Curso (TCC) em Desenvolvimento de Sistemas",
+			atribuicoesEResponsabilidades: "Planejar e desenvolver projetos de sistemas computacionais.",
+			valoresEAtitudes: "Planejar ações mais eficazes no desenvolvimento de sistemas. • Demonstrar compromentimento com equipe e o trabalho."
+		}
+	]
 ]
 
 module.exports = dados
