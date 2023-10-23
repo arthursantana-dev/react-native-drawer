@@ -24,6 +24,7 @@ export default function App() {
 			}}>
 				<Drawer.Screen name="Inicial" component={Home} />
 				<Drawer.Screen name="Primeiro Módulo" component={StackModulo} initialParams={{ dados: dados[0], idComponentesModulo: 0, componentes: [PaginaModulo, Componente]}} />
+				<Drawer.Screen name="Segundo Módulo" component={StackModulo} initialParams={{ dados: dados[1], idComponentesModulo: 0, componentes: [PaginaModulo, Componente]}} />
 			</Drawer.Navigator>
 		</NavigationContainer>
 	);

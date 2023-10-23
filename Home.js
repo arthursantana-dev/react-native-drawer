@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, Button, View } from 'react-native';
+import { StyleSheet, Text, Button, View, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { useDrawerStatus } from '@react-navigation/drawer';
 
@@ -10,12 +10,16 @@ export default function Home() {
 
   return (
     <View style={styles.container}>
-      {/* <Text>Welcome Home!</Text>
-      <Button title='Open' onPress={() => nav.openDrawer()} />
-      <Button title='Close' onPress={() => nav.closeDrawer()} />
-      <Button title='Toggle' onPress={() => nav.toggleDrawer()} />
-      <Button title='Go to settings' onPress={() => nav.navigate("Settings")} />
-      <StatusBar style="auto" /> */}
+		<Text style={styles.text}>
+			Olá! Esse app é para guiá-lo pelo curso de Desenvolvimento de Sistemas.
+		</Text>
+		<Text style={styles.text}>
+			O curso tem três módulos e dura um ano e meio. Pensamos em desenvolver esse app para explicar o conteúdo
+		</Text>
+		<Image source={{uri: './assets/ds.png'}} />
+		<Text style={[styles.text, styles.description]}>
+			Esse app foi desenvolvido sob orientação do Prof. Tiago A. Silva.
+		</Text>
     </View>
   );
 }
@@ -27,4 +31,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  text: {
+	textAlign: 'center'
+  },
+
+  description: {
+	fontSize: 10
+  }
 });

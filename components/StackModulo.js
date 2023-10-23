@@ -7,17 +7,14 @@ export default function StackModulo({route}) {
     const {dados, idComponentesModulo, componentes} = route.params
 
     const Stack = createStackNavigator()
-
-    console.log(`Stack Modulo - dados: ${Array.from(dados).length}`);
-    console.log(`Nº matérias: ${Array.from(dados).length}`);
-
+	
     return(
         <Stack.Navigator>
             <Stack.Screen options={{headerShown: false}} name="Pagina Modulo" component={componentes[0]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo}} />
 
             {
                 dados.map((d,i) => {
-                    return <Stack.Screen key={i} name={`Componente ${i}`} component={componentes[1]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo + i}}/>
+                    return <Stack.Screen key={i} name={`${dados[i].nome}`} component={componentes[1]} initialParams={{dados: dados, idComponentesModulo: idComponentesModulo + i}}/>
                 })
             }
 {/* 

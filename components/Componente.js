@@ -4,10 +4,6 @@ export default function Componente({ route }) {
 
 	const { dados, idComponentesModulo } = route.params
 
-	console.log(`Componente DADOS: ${Array.from(dados).length}`);
-
-	console.log(`Componente - dados - nome: ${dados[idComponentesModulo].nome}, idComponente: ${idComponentesModulo}`);
-
 	return (
 		<View style={style.view}>
 			<Text style={[style.text, style.title]}>
